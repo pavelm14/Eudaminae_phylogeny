@@ -1,7 +1,3 @@
----
-title: "Introduction to phylogenetic comparative methods in R"
-author: "Pável Matos"
-date: "March 25, 2020"
----
+# Phylogenomic analysis: From raw data to time-calibrated tree
 
 This is my notebook describing the process of building a phylogeny using genomic data
