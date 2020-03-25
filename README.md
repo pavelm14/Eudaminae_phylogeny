@@ -1,6 +1,7 @@
 # Phylogenomic analysis: From raw data to time-calibrated tree
-
+<p align="justify">
 This is my notebook describing the process of building a phylogeny using target capture and published whole-genome resequencing data. I will use a number of software and packages written in _Python_, _Bash_, _Perl_. The MetaCentrum Czech national cluster provides the computational resources and infrastructure for all the analyses.
+</p>
 
 ## The study group
 
