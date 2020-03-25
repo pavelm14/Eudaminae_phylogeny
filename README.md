@@ -2,11 +2,17 @@
 
 This is my notebook describing the process of building a phylogeny using target capture and published whole-genome resequencing data. I will use a number of software and packages written in _Python_, _Bash_, _Perl_. The MetaCentrum Czech national cluster provides the computational resources and infrastructure for all the analyses.
 
+## The study group
+
+We focus on the skipper butterfly subfamily Eudaminae (Lepidoptera: Hesperiidae). This is a cool group whose members show signatures of phenotypic convergences at phylogenetic scale. There are several species classified in distinct genera (e.g., _Cecropterus_, _Telegonus_) that resemble each other in wing color and shape. This also means that within each Eudaminae genus there is high morphological plasticity.
+
+You can have a look at some nice pictures of mounted and alive butterflies, and caterpilars, at [Butterflies of America](https://www.butterfliesofamerica.com/L/Hesperiidae.htm).
+
 ## The data
 
 The primary dataset comes from our sampling and target capture approach. The baits to capture come from Espeland et al. (2018), the so-called Anchored Hybrid Enrichment (AHE) BUTTERFLY 1.0 kit., which targeted 425 loci.
 
-As a complementary dataset, Emmanuel Toussaint shared their sequences of several Eudaminae (Lepidoptera: Hesperiidae) taxa. Their data come from a target capture approach using the BUTTERFLY 1.0 kit, and another kit targeting a subset of the 425 loci, the so-called legacy butterfly gene markers.
+As a complementary dataset, Emmanuel Toussaint shared their sequences of several Eudaminae taxa. Their data come from a target capture approach using the BUTTERFLY 1.0 kit, and another kit targeting a subset of the 425 loci, the so-called legacy butterfly gene markers.
 
 The published genomes come from Li et al. (2019), which used a whole-genome resequencing approach in 250 representatives of the skipper butterflies (Hesperiidae).
 
