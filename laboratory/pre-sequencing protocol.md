@@ -18,4 +18,4 @@ The legs were then left overnight to evaporate the ethanol at room temperature. 
 ### Usage of DNA extraction kit
 1. I used two types of QIAGEN kits, [DNeasy Blood & Tissue](https://www.qiagen.com/us/products/discovery-and-translational-research/dna-rna-purification/dna-purification/genomic-dna/dneasy-blood-and-tissue-kit/#orderinginformation) for fresh and dried material, and the [QIAamp DNA Micro](https://www.qiagen.com/us/shop/pcr/qiaamp-dna-micro-kit/) for old museum specimens.
 
-2. I placed the legs in a 1.5mL microcentrifuge tube and added 180 \mu
+2. I placed the legs in a 1.5mL microcentrifuge tube and added 180 μL 
