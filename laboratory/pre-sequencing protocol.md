@@ -37,4 +37,13 @@ The legs were then left overnight to evaporate the ethanol at room temperature. 
 10. A negative control was simultaneously included during the DNA isolations steps for the museum specimens only. In that way, I double-checked false positives that may have potentially arise from contamination in the lab.
 
 ## DNA quality and quantity control
+We used up to four approaches to measure DNA quality and quantity. For all samples, I used Qubit fluorometric quantitation and NanoDrop spectrophotometry. For most samples, I evaluated DNA integrity and rough estimation of genomic DNA sizes using electrophoresis. For a handful of samples, I ran TapeStation to accurately screen DNA fragmentation and nucleic acid concentration.
 
+### Electrophoresis: Estimation of DNA fragmentation and concentration
+1. Prepare the electrophoresis gel by mixing 100 mL of 1X TAE Buffer, 1 g of agarose, and 1μL of GelRed for DNA staining. Microwave the solution until it becomes transparent. Cool down a bit the agarose mix and place it to the electrophoresis tray, along with the combs that will create the wells for DNA. Wait until the gel solidifies.
+
+2. Mix 3 μL of DNA and 1 μL of Blue Loading Buffer. You can use Parafilm to create drops of the mix, otherwise, use strips and place one sample per well. It is advvisable to load a DNA ladder to get an estimate of DNA fragment sizes and concentrations.
+
+3. Load the DNA mixture to the 1% agarose gel and start the electrophoresis by applying 100 V for 60 minutes.
+
+4. Store the DNA aliquots at &minus;20&deg; C.
