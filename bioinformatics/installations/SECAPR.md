@@ -61,3 +61,36 @@ To deactivate the environment and to switch back to the standard environment, us
 ```console
 (base) pavelmatos@nympha:~/software$ conda deactivate
 ```
+
+### Installation of the development version of SECAPR
+I use the latest updates of SECAPR available only in GitHub and not in the package installation made by conda. Proceed to the following steps to get SECAPR development version
+
+1. Activate the SECAPR environment
+
+```console
+pavelmatos@nympha:~/software$ source activate secapr_env
+```
+2. Download the latest updates as stored in GitHub
+
+```console
+(base) pavelmatos@nympha:~/software$ wget https://github.com/AntonelliLab/seqcap_processor/archive/master.zip
+```
+
+3. Unzip the file. The folder is in the ./software. However, when working in a different computer make sure to place the unzipped directory in a safe location where you won't delete it, for example, not on your ./desktop or ./download folders. This is because the directory will be in the $PATH where SECAPR will be executed from in the future.
+
+```console
+(base) pavelmatos@nympha:~/software$ unzip master.zip
+```
+
+4. Remove the current SECAPR installation made by conda
+
+```console
+(base) pavelmatos@nympha:~/software$ conda remove secapr
+```
+
+5. Go to the unzipped directory and install the development version of SECAPR using Python
+
+```console
+(base) pavelmatos@nympha:~/software$ cd seqcap_processor-master
+(base) pavelmatos@nympha:~/software/seqcap_processor-master$ python -m pip install -e .
+```
