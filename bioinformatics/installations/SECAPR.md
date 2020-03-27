@@ -76,7 +76,7 @@ pavelmatos@nympha:~/software$ source activate secapr_env
 (base) pavelmatos@nympha:~/software$ wget https://github.com/AntonelliLab/seqcap_processor/archive/master.zip
 ```
 
-3. Unzip the file. The folder is in the ./software. However, when working in a different computer make sure to place the unzipped directory in a safe location where you won't delete it, for example, not on your ./desktop or ./download folders. This is because the directory will be in the $PATH where SECAPR will be executed from in the future.
+3. Unzip the file. The folder is in the ./software. However, when working in a different computer make sure to place the unzipped directory in a safe location where you won't delete it, for example, not on your `/desktop` or `/download` folders. This is because the directory will be in the $PATH where SECAPR will be executed from in the future.
 
 ```console
 (base) pavelmatos@nympha:~/software$ unzip master.zip
@@ -95,7 +95,7 @@ pavelmatos@nympha:~/software$ source activate secapr_env
 (base) pavelmatos@nympha:~/software/seqcap_processor-master$ python -m pip install -e .
 ```
 
-The new installation is located in the folder ./seqcap_processor-master which **should not be deleted**.
+The new installation is located in the folder `./seqcap_processor-master` which **should not be deleted**.
 
 To double-check that we have the correct development version:
 
@@ -107,3 +107,15 @@ secapr 0+unknown
 ```
 
 #### When SECAPR has been previously installed in the cluster (e.g, Albiorix)
+If this is happening, you won't have writing access to update SECAPR to the development version.
+
+Another option to install SECAPR locally is to use the script `secapr_list_linux.txt` written by Tobias Andermann. The file is stored at my laptop `D:\PAVEL\Lepidoptera projects\Hesperiidae\Laboratory\NGS bioinformatics\src` and also in this GitHub notebook at `Eudaminae_phylogeny/bioinformatics/src`.
+
+Execute the following command where you want to install SECAPR
+
+```sh
+conda create --name secapr --file ./secapr_list_linux.txt
+```
+
+From now on the name of the environment would be `secapr` and not `secapr_env`. Thus, to activate the pipeline, type `source activate secapr`.
+
