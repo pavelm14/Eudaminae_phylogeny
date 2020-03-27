@@ -12,4 +12,8 @@ There are several frontends, or machines, that can be used directly via log in w
 Have a look at the MetaCentrum Wiki pages for further basic information about the [frontends](https://wiki.metacentrum.cz/wiki/Frontend), [data transfer](https://wiki.metacentrum.cz/wiki/Working_with_data), or how to [submit jobs](https://wiki.metacentrum.cz/wiki/How_to_compute/Batch_jobs).
 
 ### Log in to MetaCentrum
-I use the home portable version of [MobaXterm](https://mobaxterm.mobatek.net/download-home-edition.html) to create an environment in MetaCentrum from my Windows laptop. 
+I use the home portable version of [MobaXterm](https://mobaxterm.mobatek.net/download-home-edition.html) to create an environment in MetaCentrum from my Windows laptop. I use `ssh` to log in into any MetaCentrum frontend, for example, below I log in to the _nympha_ frontend in Plzen where I run all NGS-related analyses.
+
+```bash
+ssh -x pavelmatos@nympha.metacentrum.cz
+```
