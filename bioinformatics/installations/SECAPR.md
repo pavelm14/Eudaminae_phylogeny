@@ -39,3 +39,25 @@ Install SECAPR in a new virtual environment named _secapr_env_.
 (base) pavelmatos@nympha:~/software$ conda create -n secapr_env secapr
 ```
 
+### The active environment
+Before working with SECAPR from now on, we need to activate its virtual environment using:
+
+```console
+(base) pavelmatos@nympha:~/software$ source activate secapr_env
+```
+
+When the environment is activated, all the necessary software dependencies are available in the standard $PATH.
+
+For example, when you type `samtools`, the software's version required by SECAPR will be executed.
+
+You can also check that the correct environment is activated by typing the following. There should be a * in front of _secapr_env_ in the output of this command.
+
+```console
+(base) pavelmatos@nympha:~/software$ conda info --envs
+```
+
+To deactivate the environment and to switch back to the standard environment, use the following:
+
+```console
+(base) pavelmatos@nympha:~/software$ conda deactivate
+```
