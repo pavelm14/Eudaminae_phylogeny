@@ -94,3 +94,16 @@ pavelmatos@nympha:~/software$ source activate secapr_env
 (base) pavelmatos@nympha:~/software$ cd seqcap_processor-master
 (base) pavelmatos@nympha:~/software/seqcap_processor-master$ python -m pip install -e .
 ```
+
+The new installation is located in the folder ./seqcap_processor-master which **should not be deleted**.
+
+To double-check that we have the correct development version:
+
+```console
+(base) pavelmatos@nympha:~/software/seqcap_processor-master$ cd ..
+(base) pavelmatos@nympha:~/software$ source active secapr_env
+(secapr_env) pavelmatos@nympha:~/software$ secapr --version
+secapr 0+unknown
+```
+
+#### When SECAPR has been previously installed in the cluster (e.g, Albiorix)
