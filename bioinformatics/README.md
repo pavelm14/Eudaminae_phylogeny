@@ -17,3 +17,12 @@ I use the home portable version of [MobaXterm](https://mobaxterm.mobatek.net/dow
 ```bash
 ssh -x pavelmatos@nympha.metacentrum.cz
 ```
+## Software installation in MetaCentrum
+MetaCentrum has a [page](https://wiki.metacentrum.cz/wiki/How_to_install_an_application) detailing how to install software, packages written in several programming languages, or using GUI to install some applications.
+
+I also describe in separate entries how to install the following relevant software in MetaCentrum:
+
+- **SECAPR, SEquence CApture PRocessor** ([Andermann et al. 2018](https://doi.org/10.7717/peerj.5175)): This is a pipeline for processing targeted enriched Illumina sequences, from raw data to alignments. However, I also use this pipeline to process whole-genome resequencing data.
+
+- **SRA toolkit** ([NCBI 2011&ndash;](https://www.ncbi.nlm.nih.gov/books/NBK158900/)): This is collection of packages for downloading and managing SRA data from GenBank. I use this for getting the whole-genome resequencing data from [Li et al. (2019)](https://www.pnas.org/content/116/13/6232).
+
