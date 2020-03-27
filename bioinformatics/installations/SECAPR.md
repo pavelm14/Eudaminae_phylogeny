@@ -13,6 +13,13 @@ pavelmatos@nympha:~/software$ wget https://repo.continuum.io/miniconda/Miniconda
 pavelmatos@nympha:~/software$ sh Miniconda2-latest-*.sh
 ```
 
-Follow the directions. When asking whether to append the miniconda directory to $PATH, simply type yes.
-When it asks whether to allow the installer to initialize Miniconda2 by running conda init, type again yes.
+Follow the directions. When asking whether to append the miniconda directory to $PATH, simply type yes. When it asks whether to allow the installer to initialize Miniconda2 by running conda init, type again yes.
+
 When it asks in which location Miniconda2 should be installed, type: `/storage/plzen1/home/pavelmatos/software/miniconda2`.
+
+Once the installation is completed, quit and reopen the terminal. It is important to test that conda is really installed. First, when openning a new session you need to type `source ~/.bashrc` to have conda in the $PATH.
+
+```console
+pavelmatos@nympha:~/software$ source ~/.bashrc
+(base) pavelmatos@nympha:~/software$ conda info
+```
