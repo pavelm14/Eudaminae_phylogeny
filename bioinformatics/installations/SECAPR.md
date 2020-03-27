@@ -23,3 +23,19 @@ Once the installation is completed, quit and reopen the terminal. It is importan
 pavelmatos@nympha:~/software$ source ~/.bashrc
 (base) pavelmatos@nympha:~/software$ conda info
 ```
+
+Finally, add Bioconda channels containing relevant bioinformatic software.
+
+```console
+(base) pavelmatos@nympha:~/software$ conda config --add channels defaults; conda config --add channels conda-forge; conda config --add channels bioconda; conda config --add channels https://conda.anaconda.org/faircloth-lab
+```
+
+## SECAPR installation
+Conda has automatically downloaded and installed all the necessary software dependencies. It's recommended that SECAPR and all its dependencies are in a separate **virtual environment**. This is important because the new environment will not interfere with potentially already installed versions of the software dependencies.
+
+Install SECAPR in a new virtual environment named _secapr_env_.
+
+```console
+(base) pavelmatos@nympha:~/software$ conda create -n secapr_env secapr
+```
+
