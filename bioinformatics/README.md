@@ -15,7 +15,10 @@ Have a look at the MetaCentrum Wiki pages for further basic information about th
 I use the home portable version of [MobaXterm](https://mobaxterm.mobatek.net/download-home-edition.html) to create an environment in MetaCentrum from my Windows laptop. I use `ssh` to log in into any MetaCentrum frontend, for example, below I log in to the _nympha_ frontend in Plzen where I run all NGS-related analyses.
 
 ```bash
-ssh -x pavelmatos@nympha.metacentrum.cz
+ssh -x pavelmatos@nympha.metacentrum.cz #To run NGS data analyses
+ssh -x pavelmatos@zuphux.cerit-sc.cz #To run high-memory demanding jobs
+ssh -x pavelmatos@skirit.metacentrum.cz #To run diversification and biogeography analyses
+ssh -x pavelmatos@storage-brno3-cerit.metacentrum.cz #To back up data
 ```
 ## Software installation in MetaCentrum
 MetaCentrum has a [page](https://wiki.metacentrum.cz/wiki/How_to_install_an_application) detailing how to install software, packages written in several programming languages, or using GUI to install some applications.
