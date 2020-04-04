@@ -101,7 +101,7 @@ To double-check that we have the correct development version:
 
 ```console
 (base) pavelmatos@nympha:~/software/seqcap_processor-master$ cd ..
-(base) pavelmatos@nympha:~/software$ source active secapr_env
+(base) pavelmatos@nympha:~/software$ source activate secapr_env
 (secapr_env) pavelmatos@nympha:~/software$ secapr --version
 secapr 0+unknown
 ```
