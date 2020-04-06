@@ -68,38 +68,40 @@ I use the latest updates of SECAPR available only in GitHub and not in the packa
 1. Activate the SECAPR environment
 
 ```console
-pavelmatos@nympha:~/software$ source activate secapr_env
+pavelmatos@nympha:~/software$ source ~/.bashrc
+(base) pavelmatos@nympha:~/software$ source activate secapr_env
 ```
 2. Download the latest updates as stored in GitHub
 
 ```console
-(base) pavelmatos@nympha:~/software$ wget https://github.com/AntonelliLab/seqcap_processor/archive/master.zip
+(secapr_env) pavelmatos@nympha:~/software$ wget https://github.com/AntonelliLab/seqcap_processor/archive/master.zip
 ```
 
 3. Unzip the file. The folder is in the ./software. However, when working in a different computer make sure to place the unzipped directory in a safe location where you won't delete it, for example, not on your `/desktop` or `/download` folders. This is because the directory will be in the $PATH where SECAPR will be executed from in the future.
 
 ```console
-(base) pavelmatos@nympha:~/software$ unzip master.zip
+(secapr_env) pavelmatos@nympha:~/software$ unzip master.zip
 ```
 
 4. Remove the current SECAPR installation made by conda
 
 ```console
-(base) pavelmatos@nympha:~/software$ conda remove secapr
+(secapr_env) pavelmatos@nympha:~/software$ conda remove secapr
 ```
 
 5. Go to the unzipped directory and install the development version of SECAPR using Python
 
 ```console
-(base) pavelmatos@nympha:~/software$ cd seqcap_processor-master
-(base) pavelmatos@nympha:~/software/seqcap_processor-master$ python -m pip install -e .
+(secapr_env) pavelmatos@nympha:~/software$ cd seqcap_processor-master
+(secapr_env) pavelmatos@nympha:~/software/seqcap_processor-master$ python -m pip install -e .
 ```
 
 The new installation is located in the folder `./seqcap_processor-master` which **should not be deleted**.
 
-To double-check that we have the correct development version:
+To double-check that we have the correct development version in a new session:
 
 ```console
+pavelmatos@nympha:~/software$ source ~/.bashrc
 (base) pavelmatos@nympha:~/software/seqcap_processor-master$ cd ..
 (base) pavelmatos@nympha:~/software$ source activate secapr_env
 (secapr_env) pavelmatos@nympha:~/software$ secapr --version
