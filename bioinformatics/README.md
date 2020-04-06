@@ -54,7 +54,23 @@ done
 
 After uploading files from my own computer to the cluster, the user/group at the cluster will not have rights to write nor execute the data. Therefore, I might need to change permissions in some cases.
 
-To change modes to `root`, `user`, and `group` to `write`, `read`, and `execute` on a bunch of folders or files, the easiest way is to run the following example for directories:
+To change modes to `user`, `group`, `others` to `write`, `read`, `execute` on a bunch of folders or files, the easiest way is to run the following example for directories:
 
 ```bash
+$ find ./folder/ -type d -exec chmod 755 {} \;
 ```
+
+And this is for files within a folder:
+
+```bash
+$ find ./folder/ -type f -exec chmod 755 {} \;
+```
+
+The modes can be changed using numbers. For example, `chmod 755` means full access (7: rwx) to the `user`, read and execute modes (5: r-x) to both the `group` and `others`. Another example, `chmod 644` means read and write access (6: rw-) to the `user`, and read-only access (4: r--) to both the `group` and `others`. You can [have a look](https://en.wikipedia.org/wiki/Chmod) to what the numbers, from 0 to 7, mean when using `chmod`.
+
+If you want to check the size of a directory, use the `du` (disk usage) command with the options `-s` for summary and `-h` for human readable mode
+
+```bash
+$ du -sh /storage/plzen1/home/pavelmatos/eudaminae/data/janzen19/fastq
+```
+
