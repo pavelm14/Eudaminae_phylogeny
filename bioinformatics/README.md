@@ -29,3 +29,26 @@ I also describe in separate entries how to install the following relevant softwa
 
 - **SRA toolkit** ([NCBI 2011&ndash;](https://www.ncbi.nlm.nih.gov/books/NBK158900/)): This is collection of packages for downloading and managing SRA data from GenBank. I use this for getting the whole-genome resequencing data from [Li et al. (2019)](https://www.pnas.org/content/116/13/6232).
 
+## Retrieve data from local disk to cluster (and vice versa)
+I use MobaXterm to transfer data between my local computer and the MetaCentrum. For example, I want to back up a copy of the raw target capture sequencing data:
+
+```bash
+cd /drives/d/PAVEL/Lepidoptera\ projects/Hesperiidae/Laboratory/RapidGenomics/data/raw/
+```
+
+There are 290 files with compressed sequences (.tar.gz) which correponds to the R1 and R2 reads for 145 skipper specimens.
+
+To copy these recursiverly to my back up folder in `storage-brno3-cerit.metacentrum.cz`
+
+```bash
+scp -r ./*.fastq.gz pavelmatos@zuphux.cerit-sc.cz:/home/pavelmatos/eudaminae/raw
+```
+
+If many large directories are needed, a batch download of part of them might be better. In this case, I upload the first 30 specimens having clean (trimmed) reads. The sequences are stored uncompressed (.fastq) for each specimen in ony numbered folder (from 001/ to 145/).
+
+```bash
+for i in {001..030}; 
+do scp -r ../../../NGS\ bioinformatics/processed/2_cleaned_trimmed_reads/"$i"_clean/ pavelmatos@nympha.metacentrum.cz:/home/pavelmatos/eudaminae/processed/2_cleaned_trimmed_reads;
+done
+```
+
