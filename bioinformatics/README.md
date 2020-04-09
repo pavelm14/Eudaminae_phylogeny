@@ -75,19 +75,33 @@ find ./any_folder/ -type f -exec chmod 755 {} \;
 
 The modes can be changed using numbers. For example, `chmod 755` means full access (7: rwx) to the `user`, read and execute modes (5: r-x) to both the `group` and `others`. Another example, `chmod 644` means read and write access (6: rw-) to the `user`, and read-only access (4: r--) to both the `group` and `others`. You can [have a look](https://en.wikipedia.org/wiki/Chmod) to what the numbers, from 0 to 7, mean when using `chmod`.
 
+Another way to change permits:
+
+```bash
+pavelmatos@nympha:~$
+chmod +x file_rename.sh ##It makes the file_rename executable
+```
+
 ### Transfer sanitation
-If you want to check the size of a directory, use the `du` (disk usage) command with the options `-s` for summary and `-h` for human readable mode
+If you want to check the size of a directory, use the `du` (disk usage) command with the options `-s` for summary and `-h` for human readable mode.
 
 ```bash
 pavelmatos@nympha:~$
 du -sh /storage/plzen1/home/pavelmatos/eudaminae/data/janzen19/fastq
 ```
 
-It is also a good idea to check the file integrity after transfering data to the cluster
+It is also a good idea to check the file integrity after transfering data to the cluster.
 
 ```bash
 pavelmatos@nympha:~$
 cd eudaminae/data/janzen19/fastq
 md5sum * > checklist.chk ##Summarize results in the .chk file
 md5sum -c checklist.chk ##Report integrity of every file
+```
+
+Some files that were created in Windows can be screwed or not in the correct format fully understandable in UNIX. It is advisable to change the format in files created in another OS.
+
+```bash
+pavelmatos@nympha:~$
+dos2unix file_rename.sh
 ```
