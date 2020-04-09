@@ -15,7 +15,7 @@ To get the commands of SRA toolkit working without always going back to the srat
 
 ```bash
 nano ~/.bashrc
-## Add this line to the text in .bashrc
->>> export PATH="/storage/plzen1/home/pavelmatos/sratoolkit.2.9.6-1-ubuntu64/bin:$PATH"
+## Add the following text to the last line of .bashrc
+export PATH="/storage/plzen1/home/pavelmatos/software/sratoolkit.2.9.6-1-ubuntu64/bin:$PATH"
 ## Ctrl+x -> Save Y
 ```
