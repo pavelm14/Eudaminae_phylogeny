@@ -20,3 +20,7 @@ nano ~/.bashrc
 export PATH="/storage/plzen1/home/pavelmatos/software/sratoolkit.2.9.6-1-ubuntu64/bin:$PATH"
 ## Ctrl+x -> Save Y
 ```
+
+Now, it's possible to use commands such as `prefetch` to download SRA files or `fasterq-dump` to convert SRA to fastq formats.
+
+The downloaded SRA data is stored at `~/ncbi/public/sra/`.
