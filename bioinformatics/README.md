@@ -16,10 +16,10 @@ I use the home portable version of [MobaXterm](https://mobaxterm.mobatek.net/dow
 
 ```bash
 [pavel local computer]$
-ssh -x pavelmatos@nympha.metacentrum.cz #To run NGS data analyses
-ssh -x pavelmatos@zuphux.cerit-sc.cz #To run high-memory demanding jobs
-ssh -x pavelmatos@skirit.metacentrum.cz #To run diversification and biogeography analyses
-ssh -x pavelmatos@storage-brno3-cerit.metacentrum.cz #To back up data. This is the same as @zuphux.cerit-sc.cz but can't run any job here
+ssh -x pavelmatos@nympha.metacentrum.cz ##To run NGS data analyses
+ssh -x pavelmatos@zuphux.cerit-sc.cz ##To run high-memory demanding jobs
+ssh -x pavelmatos@skirit.metacentrum.cz ##To run diversification and biogeography analyses
+ssh -x pavelmatos@storage-brno3-cerit.metacentrum.cz ##To back up data. This is the same as @zuphux.cerit-sc.cz but can't run any job here
 ```
 ## Software installation in MetaCentrum
 MetaCentrum has a [page](https://wiki.metacentrum.cz/wiki/How_to_install_an_application) detailing how to install software, packages written in several programming languages, or using GUI to install some applications.
@@ -62,14 +62,15 @@ After uploading files from my own computer to the cluster, the user/group at the
 To change modes to `user`, `group`, `others` to `write`, `read`, `execute` on a bunch of folders or files, the easiest way is to run the following example for directories:
 
 ```bash
-
-find ./folder/ -type d -exec chmod 755 {} \;
+pavelmatos@nympha:~$
+find ./any_folder/ -type d -exec chmod 755 {} \;
 ```
 
 And this is for files within a folder:
 
 ```bash
-find ./folder/ -type f -exec chmod 755 {} \;
+pavelmatos@nympha:~$
+find ./any_folder/ -type f -exec chmod 755 {} \;
 ```
 
 The modes can be changed using numbers. For example, `chmod 755` means full access (7: rwx) to the `user`, read and execute modes (5: r-x) to both the `group` and `others`. Another example, `chmod 644` means read and write access (6: rw-) to the `user`, and read-only access (4: r--) to both the `group` and `others`. You can [have a look](https://en.wikipedia.org/wiki/Chmod) to what the numbers, from 0 to 7, mean when using `chmod`.
@@ -78,11 +79,15 @@ The modes can be changed using numbers. For example, `chmod 755` means full acce
 If you want to check the size of a directory, use the `du` (disk usage) command with the options `-s` for summary and `-h` for human readable mode
 
 ```bash
+pavelmatos@nympha:~$
 du -sh /storage/plzen1/home/pavelmatos/eudaminae/data/janzen19/fastq
 ```
 
 It is also a good idea to check the file integrity after transfering data to the cluster
 
 ```bash
-
+pavelmatos@nympha:~$
+cd eudaminae/data/janzen19/fastq
+md5sum * > checklist.chk ##Summarize results in the .chk file
+md5sum -c checklist.chk ##Report integrity of every file
 ```
