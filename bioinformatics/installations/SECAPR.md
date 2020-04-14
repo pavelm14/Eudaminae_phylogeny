@@ -121,3 +121,5 @@ conda create --name secapr --file ./secapr_list_linux.txt
 
 From now on the name of the environment would be `secapr` and not `secapr_env`. Thus, to activate the pipeline, type `source activate secapr`.
 
+### References
+- Andermann et al. (2018) SECAPR—a bioinformatics pipeline for the rapid and user-friendly processing of targeted enriched Illumina sequences, from raw reads to alignments. PeerJ 6: e5175. DOI: [10.7717/peerj.5175](https://doi.org/10.7717/peerj.5175)
