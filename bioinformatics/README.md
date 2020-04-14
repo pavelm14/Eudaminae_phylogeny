@@ -3,7 +3,7 @@
 The target capture sequence raw data as it was sent by RapidGenomics are stored in: 1) **My laptop**, 2) **External HD**, 3) **Albiorix Gothenburg cluster (~/proj/data25)**, and 4) **MetaCentrum Czech national cluster (/storage/brno3-cerit/home/pavelmatos/eudaminae/raw)**.
 
 ## The MetaCentrum infrastructure
-There are several frontends, or machines, that can be used directly via log in without reservation. I've been regularly using 4 frontends regularly:
+There are several frontends, or machines, that can be used directly via log in without reservation. I've been regularly using 4 frontends:
 - `skirit.ics.muni.cz` (home directory in **_brno2_**) for small analyses such as diversification and biogeography,
 - `zuphux.cerit-sc.cz` (home directory in **_brno3-cerit_**) for high memory jobs, up to a few TB of memory,
 - `nympha.zcu.cz` (home directory in **_plzen1_**) for running NGS-related analyses because it has 3 TB space quota for storing, and
