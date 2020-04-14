@@ -47,7 +47,7 @@ To copy these recursiverly to my back up folder in `storage-brno3-cerit.metacent
 scp -r ./*.fastq.gz pavelmatos@zuphux.cerit-sc.cz:/home/pavelmatos/eudaminae/raw
 ```
 
-If many large directories are needed, a batch download of part of them might be better. In this case, I upload the first 30 specimens having clean (trimmed) reads. The sequences are stored uncompressed (.fastq) for each specimen in ony numbered folder (from 001/ to 145/).
+If many large directories are needed, a batch download of part of them might be better. In this case, I upload the first 30 specimens having clean (trimmed) reads. The sequences are stored uncompressed (.fastq) for each specimen in one numbered folder (from 001/ to 145/).
 
 ```bash
 [pavel local computer]$
