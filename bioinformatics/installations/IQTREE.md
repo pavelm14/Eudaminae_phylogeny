@@ -4,8 +4,8 @@ We use this program to infer maximum likelihood phylogenomic trees. The main adv
 You can find the latest releases [here](https://github.com/Cibiv/IQ-TREE/releases). As on March 23, 2020, the latest stable release was 1.6.12.
 
 ```bash
-pavelmatos@nympha:
-cd ~/software
+pavelmatos@nympha:~$ cd ~
+cd software/
 wget https://github.com/Cibiv/IQ-TREE/releases/download/v1.6.12/iqtree-1.6.12-Linux.tar.gz
 tar -zxvf iqtree-1.6.12-Linux.tar.gz
 rm iqtree-1.6.12-Linux.tar.gz
