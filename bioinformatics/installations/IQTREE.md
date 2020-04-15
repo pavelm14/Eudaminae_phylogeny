@@ -17,4 +17,15 @@ For convenience, I added the `bin` directory of IQ-TREE to my $PATH so that I ca
 pavelmatos@nympha:~$
 cd ~
 nano .bashrc
+## Add the following text to the last line of .bashrc
+export PATH="/storage/plzen1/home/pavelmatos/software/iqtree-1.6.12-Linux/bin:$PATH"
+## Ctrl+x -> Save Y
+```
+
+Next time for running IQTREE, you just need to do the following:
+
+```bash
+pavelmatos@nympha:~$
+source ~/.bashrc
+iqtree -h
 ```
