@@ -14,6 +14,9 @@ As a complementary dataset, Emmanuel Toussaint shared their sequences of several
 
 The published genomes come from Li et al. (2019), which used a whole-genome resequencing approach in 250 representatives of the skipper butterflies (Hesperiidae).
 
+### Subfamily phylogeny paper
+For this study, the sampling size consists of one specimen per species. In total, there are 215 species: 186 species of Eudaminae and 29 outgroup taxa coming from the family Hesperiidae.
+
 ## The MetaCentrum
 The computational resources and infrastructure is facilitated by [MetaCentrum VO](https://metavo.metacentrum.cz/en/about/index.html), which is available to researchers based in the Czech Republic. My user account is [pavelmatos](https://metavo.metacentrum.cz/pbsmon2/user/pavelmatos).
 
