@@ -7,3 +7,4 @@ We will need to have three [pipelines already installed](https://github.com/pave
 - SeqKit: a cross-platform toolkit for phylogenomic fasta manipulation. This will allow us to batch rename taxa in every fasta file.
 - SECAPR: a semi-automated pipeline that will allow us to add missing sequences to specimens in every fasta file.
 - _catfasta2phyml_: a program written in perl that will allow us to concatenate and get partition files.
+
