@@ -9,3 +9,20 @@ We will need to have three [pipelines already installed](https://github.com/pave
 - _catfasta2phyml_: a program written in perl that will allow us to concatenate and get partition files.
 
 ## Rename specimens in every fasta file
+We will use the SeqKit toolkit to rename taxon name given a list of names. The list should be a tab-delimited file and the names in this file should exactly match the ones in the fasta file. The example file **taxon_list.txt** is in `src` and in my laptop `Hesperiidae/Laboratory/NGS bioinformatics`
+
+```bash
+pavelmatos@nympha:~$
+cd ~/eudaminae/processed/cleaned_geneious
+source ~/.bashrc #activate and use SeqKit from the PATH environment
+
+# we will make a for loop to go through every fasta file in /cleaned_geneious
+# note that the file taxon_list.txt is in one directory above, in ~/eudaminae/processed
+
+for file in *.fasta; do
+seqkit replace -p "(.+)" -r '{kv}' -k ../taxon_list.txt "$file" > "${file%%.*}"".fas"
+done
+```
+
+Above, we ran the _replace_ option of SeqKit. This command uses regular expression to rename taxa in fasta files. In the `-p` and `-r` flags we tell the program to entirely replace string having a value by key-value file (taxon_list.txt). More info about the option and flags [here](https://bioinf.shenwei.me/seqkit/usage/#replace).
+
