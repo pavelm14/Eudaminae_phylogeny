@@ -26,3 +26,23 @@ done
 
 Above, we ran the _replace_ option of SeqKit. This command uses regular expression to rename taxa in fasta files. In the `-p` and `-r` flags we tell the program to entirely replace string having a value by key-value file (taxon_list.txt). More info about the option and flags [here](https://bioinf.shenwei.me/seqkit/usage/#replace).
 
+The new fasta files will have the same name but a different extension. For example, we had the original file `P1.fasta` so we will have the file `P1.fas` with the renamed taxa.
+
+Some programs need to have the fasta files with sequences in one single line. To make it universal, we will reformat the renamed fasta files that have multi-line sequence information. We will simply use bash commands to remove those break lines in the middle of the DNA sequences. In the process, we will move the renamed, single-line-sequences fasta files to a new subfolder cleaned_geneious\renamed.
+
+```bash
+pavelmatos@nympha:~/eudaminae/processed/cleaned_geneious$
+mkdir renamed
+
+# we will make a for loop to go through every fasta file in /cleaned_geneious
+# we will use a awk formula to remove break lines within sequences and 
+# move the new fasta files to the folder /renamed
+
+for file in *.fas; do
+awk '/^>/ {printf("\n%s\n",$0);next; } { printf("%s",$0);}  END {printf("\n");}' < "$file" > "./renamed/""${file%%.*}"".fasta"
+done
+```
+
+We used an `awk` script with the first block triggered when a line begins with `>`, that is, the sequence header. We ask the formula to print the header line on its own line. The other lines are skipped and passed to the second block given the `next` argument. The second block prints the sequence without newline, until it reaches the next `>` header. The last, third block will print the final newline (sequence) after the last header line. Script adapted from [here](https://unix.stackexchange.com/questions/346143/understanding-an-awk-formula-that-unwraps-fasta-files).
+
+
