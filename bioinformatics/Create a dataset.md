@@ -46,3 +46,14 @@ done
 We used an `awk` script with the first block triggered when a line begins with `>`, that is, the sequence header. We ask the formula to print the header line on its own line. The other lines are skipped and passed to the second block given the `next` argument. The second block prints the sequence without newline, until it reaches the next `>` header. The last, third block will print the final newline (sequence) after the last header line. Script adapted from [here](https://unix.stackexchange.com/questions/346143/understanding-an-awk-formula-that-unwraps-fasta-files).
 
 
+You can have a look at how many loci a particular specimen has DNA sequence. We use the `grep` command with `-i` (ignore case), `-R` (read all files recursively) and `-l` (print the file name where there is a match).
+
+```bash
+pavelmatos@nympha:~/eudaminae/processed/cleaned_geneious$ pwd
+grep -iRl ">001" ./ | wc -l
+
+cd ./renamed
+grep -iRl "PM-UN-2-2" ./ | wc -l
+
+# the two grep output should give you the same value
+```
