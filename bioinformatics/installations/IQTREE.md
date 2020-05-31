@@ -6,8 +6,10 @@ You can find the latest releases [here](https://github.com/Cibiv/IQ-TREE/release
 ```bash
 pavelmatos@nympha:~$
 cd ~/software
+
 wget https://github.com/Cibiv/IQ-TREE/releases/download/v2.0.5/iqtree-2.0.5-Linux.tar.gz
 tar -zxvf iqtree-2.0.5-Linux.tar.gz
+
 rm iqtree-2.0.5-Linux.tar.gz
 ```
 
