@@ -2,7 +2,7 @@
 
 Once we have our clean alignments, the next step is to create datasets for different type of analyses. The main goals here are: 1) to rename specimen names in every alignment file, 2) to subset the data, 3) to count the number of loci per specimen or the number of specimens per locus we have in our datasets, and 4) to concatenate and add missing sequences to specimens in every fasta file.
 
-##### Table of Contents  
+##### Table of Contents
 - [Software](#software-that-we-need)  
 1. [Rename taxa](#1-rename-specimens-in-every-fasta-file)
    - [Reformat fasta sequences](#11-multi--to-single-line-sequences-in-fasta-files)
@@ -76,6 +76,8 @@ rm *.fas #remove every multi-line renamed sequences
 
 We used an `awk` script with the first block triggered when a line begins with `>`, that is, the sequence header. We ask the formula to print the header line on its own line. The other lines are skipped and passed to the second block given the `next` argument. The second block prints the sequence without newline, until it reaches the next `>` header. The last, third block will print the final newline (sequence) after the last header line. Script adapted from [here](https://unix.stackexchange.com/questions/346143/understanding-an-awk-formula-that-unwraps-fasta-files).
 
+Go to [Table of Contents](#table-of-contents)
+
 ## 2. Count number of sequences across fasta files
 You can count how many loci a particular specimen has DNA sequence. We use the `grep` command with `-i` (ignore case), `-R` (read all files recursively) and `-l` (print the file name where there is a match).
 
@@ -123,6 +125,8 @@ done < ../final_dataset.txt > loci_per_sample.txt
 
 In the code above, we search for every line containing voucher codes in the `final_dataset.txt`, and go through every fasta file. We search and count the number of times a voucher code appears (we have only one voucher code per fasta file, no duplicated sequences). Finally, we print the voucher code followed by the counts, and save the list in the file `loci_per_sample.txt`.
 
+Go to [Table of Contents](#table-of-contents)
+
 ## 3. Extract sequences of interest from multiple fasta files
 Let's now extract the sequences that will go to our final dataset. We will use the same file `final_dataset.txt` as a reference.
 
@@ -155,6 +159,8 @@ done > samples_per_locus.txt
 
 In the code above, we go through every fasta file in the folder `/final_dataset` and count the number of sequences in every file (locus). Print the locus name (if the file is `P1.fasta` the locus name is P1) with the number of sequences, and save it in the file `samples_per_locus.txt`.
 
+Go to [Table of Contents](#table-of-contents)
+
 ## 4. Add missing sequences to fasta files
 When using programs such as BEAST we need to have the same number of taxa in every locus file. We also need to have missing sequences filled with "?" or "N" when using the concatenation method in, for example, IQTREE.
 
@@ -170,32 +176,45 @@ cd ..
 secapr add_missing_sequences --input final_dataset/ --output final_dataset/complete_alignments
 ```
 
+Go to [Table of Contents](#table-of-contents)
+
 ## 5. Concatenation and partition files
 We can concatenate every fasta file into a single, Phylip format alignment. The Phylip format consists of single lines each with taxon name and sequence data. There are multiple chunks of sequences, each representing one locus. The taxon names are displayed in the first chunk of sequences, while the others have just sequence data in the same order as the first chunk of sequences:
 
-> 3 30
->
-> Taxon_1   ATGTACTGTG
->
-> Taxon_2   ATGTACTGTG
->
-> Taxon_3   ATGTACTGTG
->
-> 
->
->TGTGCACATG
->
->TGTGCACATG
->
->TGTGCACATG
->
-> 
->
->CCACATGTGA
->
->CCACATGTGA
->
->CCACATGTGA
+```
+3 30
+Taxon_1   ATGTACTGTGATGTACTGTG
+Taxon_2   ATGTACTGTGATGTACTGTG
+Taxon_3   ATGTACTGTGATGTACTGTG
+
+TGTGCACATGTGTGCACATG
+TGTGCACATGTGTGCACATG
+TGTGCACATGTGTGCACATG
+
+CCACATGTGACCACATGTGA
+CCACATGTGACCACATGTGA
+CCACATGTGACCACATGTGA
+```
 
 We will use the script `catfasta2phyml.pl` to concatenate all the fasta files (each representing one locus/exon) into a single Phylip format alignment.
 
+```bash
+pavelmatos@nympha:~/eudaminae/processed$
+# the script is at /storage/plzen1/home/pavelmatos/software/catfasta2phyml
+
+cd ./final_dataset/complete_alignments
+~/software/catfasta2phyml/catfasta2phyml.pl *.fasta > concatenated_406.phy 2> partitions_406.txt
+```
+
+The partition file `partitions_406.txt` can be easily edited for `PartitionFinder2` in a spreadsheet such as `MS Excel`.
+
+```
+# Partition structure from the script catfasta2phyml.pl
+P1.fasta = 1-1533
+
+# Partition structure for PartitionFinder2
+charset P1_pos1 = 1-1533\3;
+charset P1_pos2 = 2-1533\3;
+charset P1_pos3 = 3-1533\3;
+```
+Go to [Table of Contents](#table-of-contents)
