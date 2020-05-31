@@ -15,7 +15,7 @@ Once we have our clean alignments, the next step is to create datasets for diffe
 
 ## Software that we need
 We will need to have three [pipelines already installed](https://github.com/pavelm14/Eudaminae_phylogeny/tree/master/bioinformatics/installations) for this part:
-- SeqKit: a cross-platform toolkit for phylogenomic fasta manipulation. This will allow us to batch rename taxa in every fasta file.
+- [SeqKit](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/SeqKit.md): a cross-platform toolkit for phylogenomic fasta manipulation. This will allow us to batch rename taxa in every fasta file.
 - [SECAPR](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/SECAPR.md): a semi-automated pipeline that will allow us to add missing sequences to specimens in every fasta file.
 - _catfasta2phyml_: a program written in perl that will allow us to concatenate and get partition files.
 
