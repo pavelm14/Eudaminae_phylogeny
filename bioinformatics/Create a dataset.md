@@ -10,7 +10,6 @@ Once we have our clean alignments, the next step is to create datasets for diffe
 [3. Extract sequences](3-extract-sequences-of-interest-from-multiple-fasta-files)
 [3.1. Count specimens per locus](31-count-the-number-of-specimens-per-locus)
 [4. Add missing sequences](4-add-missing-sequences-to-fasta-files)
-<a name="headers"/>
 
 ## Software that we need
 We will need to have three [pipelines already installed](https://github.com/pavelm14/Eudaminae_phylogeny/tree/master/bioinformatics/installations) for this part:
