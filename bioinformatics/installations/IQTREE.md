@@ -33,6 +33,7 @@ source ~/.bashrc
 iqtree2 -h
 ```
 
+## IQTREE version 1
 I also previously installed the version 1 of IQTREE. As on March 23, 2020, the latest stable release was 1.6.12.
 
 ```bash
