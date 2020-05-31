@@ -8,15 +8,33 @@ We will need to have three [pipelines already installed](https://github.com/pave
 - SECAPR: a semi-automated pipeline that will allow us to add missing sequences to specimens in every fasta file.
 - _catfasta2phyml_: a program written in perl that will allow us to concatenate and get partition files.
 
-## Rename specimens in every fasta file
-We will use the SeqKit toolkit to rename taxon name given a list of names. The list should be a tab-delimited file and the names in this file should exactly match the ones in the fasta file. The example file **taxon_list.txt** is in `src` and in my laptop `Hesperiidae/Laboratory/NGS bioinformatics`
+## 1. Rename specimens in every fasta file
+We will use the SeqKit toolkit to rename taxon name given a list of names. The list should be a tab-delimited file and the names in this file should exactly match the ones in the fasta file. The example file **taxon_list.txt** is in [src](https://github.com/pavelm14/Eudaminae_phylogeny/tree/master/bioinformatics/src) and in my laptop `Hesperiidae/Laboratory/NGS bioinformatics`
 
+The structure of the fasta file and the list file should be:
 ```bash
 pavelmatos@nympha:~$
 cd ~/eudaminae/processed/cleaned_geneious
-source ~/.bashrc #activate and use SeqKit from the PATH environment
 
-# we will make a for loop to go through every fasta file in /cleaned_geneious
+cat P1.fasta
+# >001
+# GTCAGTCAGTCAGTCA
+# >002
+# TGACTGACTGACTGAC
+
+cat ../taxon_list.txt
+# Bioinf_code	code
+# 001	PM-UN-2-2_Butleria_bissexguttatus_
+# 002	PM-UN-41_Bungalotis_astylos_
+```
+
+We will use a for loop to go through every fasta file in the folder /cleaned_geneious.
+
+```bash
+pavelmatos@nympha:~/eudaminae/processed/cleaned_geneious$
+#activate and use SeqKit from the PATH environment
+source ~/.bashrc
+
 # note that the file taxon_list.txt is in one directory above, in ~/eudaminae/processed
 
 for file in *.fasta; do
@@ -28,7 +46,7 @@ Above, we ran the _replace_ option of SeqKit. This command uses regular expressi
 
 The new fasta files will have the same name but a different extension. For example, we had the original file `P1.fasta` so we will have the file `P1.fas` with the renamed taxa.
 
-### Multi- to single-line sequences in fasta files
+### 1.1. Multi- to single-line sequences in fasta files
 Some programs need to have the fasta files with sequences in one single line. To make it universal, we will reformat the renamed fasta files that have multi-line sequence information. We will simply use bash commands to remove those break lines in the middle of the DNA sequences. In the process, we will move the renamed, single-line-sequences fasta files to a new subfolder cleaned_geneious\renamed.
 
 ```bash
@@ -46,8 +64,8 @@ done
 
 We used an `awk` script with the first block triggered when a line begins with `>`, that is, the sequence header. We ask the formula to print the header line on its own line. The other lines are skipped and passed to the second block given the `next` argument. The second block prints the sequence without newline, until it reaches the next `>` header. The last, third block will print the final newline (sequence) after the last header line. Script adapted from [here](https://unix.stackexchange.com/questions/346143/understanding-an-awk-formula-that-unwraps-fasta-files).
 
-
-You can have a look at how many loci a particular specimen has DNA sequence. We use the `grep` command with `-i` (ignore case), `-R` (read all files recursively) and `-l` (print the file name where there is a match).
+## 2. Count number of sequences across fasta files
+You can count how many loci a particular specimen has DNA sequence. We use the `grep` command with `-i` (ignore case), `-R` (read all files recursively) and `-l` (print the file name where there is a match).
 
 ```bash
 pavelmatos@nympha:~/eudaminae/processed/cleaned_geneious$ pwd
@@ -58,3 +76,20 @@ grep -iRl "PM-UN-2-2" ./ | wc -l
 
 # the two grep output should give you the same value
 ```
+
+You can scale up the code above to count loci in a number of specimens of interest across multiple fasta files. For example, we are interested only on the taxa that will go to our FINAL DATASET. We will use a tab-delimited list with the voucher code of taxa that should match part of the header in the fasta files.
+
+The tab-delimited final_dataset.txt is in [src](https://github.com/pavelm14/Eudaminae_phylogeny/tree/master/bioinformatics/src):
+
+```bash
+pavelmatos@nympha:~/eudaminae/processed/cleaned_geneious$
+# note that the file final_dataset.txt is in one directory above, in ~/eudaminae/processed
+
+while read -r line; do
+c=`grep -iRl "$line" ./*.fasta | wc -l`
+echo -e "$line\t$c"
+done < ../final_dataset.txt > loci_per_sample.txt
+```
+
+In the code above, we search for every line containing voucher codes in the final_dataset.txt, and go through every fasta file. We search and count the number of times a voucher code appears (we have only one voucher code per fasta file, no duplicated sequences). Finally, we print the voucher code followed by the counts, and save the list in the file loci_per_sample.txt
+
