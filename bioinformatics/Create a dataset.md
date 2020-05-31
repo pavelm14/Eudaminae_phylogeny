@@ -11,6 +11,7 @@ Once we have our clean alignments, the next step is to create datasets for diffe
    - [Count specimens per locus](#31-count-the-number-of-specimens-per-locus)
 4. [Add missing sequences](#4-add-missing-sequences-to-fasta-files)
 5. [Concatenation and partition](#5-concatenation-and-partition-files)
+6. [Subset datasets](#6-subsetting-datasets)
 
 ## Software that we need
 We will need to have three [pipelines already installed](https://github.com/pavelm14/Eudaminae_phylogeny/tree/master/bioinformatics/installations) for this part:
