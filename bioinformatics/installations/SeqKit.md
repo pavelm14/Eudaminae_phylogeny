@@ -32,3 +32,6 @@ source ~/.bashrc
 
 seqkit help
 ```
+
+### References
+- Shen et al. (2016) SeqKit: A cross-platform and ultrafast toolkit for FASTA/Q file manipulation. PLOS ONE 11(10): e0163962. DOI: [10.1371/journal.pone.0163962](https://doi.org/10.1371/journal.pone.0163962)
