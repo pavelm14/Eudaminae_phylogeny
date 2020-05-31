@@ -181,14 +181,15 @@ We can concatenate every fasta file into a single, Phylip format alignment. The 
 >
 > Taxon_3   ATGTACTGTG
 >
->
->
->TGTGCACATG
+> 
 >
 >TGTGCACATG
 >
 >TGTGCACATG
 >
+>TGTGCACATG
+>
+> 
 >
 >CCACATGTGA
 >
