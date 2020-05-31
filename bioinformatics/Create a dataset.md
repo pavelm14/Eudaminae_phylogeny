@@ -5,10 +5,10 @@ Once we have our clean alignments, the next step is to create datasets for diffe
 ##### Table of Contents  
 - [Software](#software-that-we-need)  
 1. [Rename taxa](#1-rename-specimens-in-every-fasta-file)
-  1.1. [Reformat fasta sequences](11-multi--to-single-line-sequences-in-fasta-files)
+   - [Reformat fasta sequences](11-multi--to-single-line-sequences-in-fasta-files)
 2. [Count loci per specimen](2-count-number-of-sequences-across-fasta-files)
 3. [Extract sequences](3-extract-sequences-of-interest-from-multiple-fasta-files)
-  3.1. [Count specimens per locus](31-count-the-number-of-specimens-per-locus)
+   - [Count specimens per locus](31-count-the-number-of-specimens-per-locus)
 4. [Add missing sequences](4-add-missing-sequences-to-fasta-files)
 
 ## Software that we need
