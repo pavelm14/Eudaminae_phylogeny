@@ -182,18 +182,18 @@ Go to [Table of Contents](#table-of-contents)
 We can concatenate every fasta file into a single, Phylip format alignment. The Phylip format consists of single lines each with taxon name and sequence data. There are multiple chunks of sequences, each representing one locus. The taxon names are displayed in the first chunk of sequences, while the others have just sequence data in the same order as the first chunk of sequences:
 
 ```
-3 30
-Taxon_1   ATGTACTGTGATGTACTGTG
-Taxon_2   ATGTACTGTGATGTACTGTG
-Taxon_3   ATGTACTGTGATGTACTGTG
+3 120
+Taxon_1   ATGTACTGTGATGTACTGTGATGTACTGTGATGTACTGTG
+Taxon_2   ATGTACTGTGATGTACTGTGATGTACTGTGATGTACTGTG
+Taxon_3   ATGTACTGTGATGTACTGTGATGTACTGTGATGTACTGTG
 
-TGTGCACATGTGTGCACATG
-TGTGCACATGTGTGCACATG
-TGTGCACATGTGTGCACATG
+TGTGCACATGTGTGCACATGTGTGCACATGTGTGCACATG
+TGTGCACATGTGTGCACATGTGTGCACATGTGTGCACATG
+TGTGCACATGTGTGCACATGTGTGCACATGTGTGCACATG
 
-CCACATGTGACCACATGTGA
-CCACATGTGACCACATGTGA
-CCACATGTGACCACATGTGA
+CCACATGTGACCACATGTGACCACATGTGACCACATGTGA
+CCACATGTGACCACATGTGACCACATGTGACCACATGTGA
+CCACATGTGACCACATGTGACCACATGTGACCACATGTGA
 ```
 
 We will use the script `catfasta2phyml.pl` to concatenate all the fasta files (each representing one locus/exon) into a single Phylip format alignment.
@@ -217,4 +217,11 @@ charset P1_pos1 = 1-1533\3;
 charset P1_pos2 = 2-1533\3;
 charset P1_pos3 = 3-1533\3;
 ```
+
 Go to [Table of Contents](#table-of-contents)
+
+## 6. Subsetting datasets
+We will subset a different dataset. This time, we want to extract the loci that have at least 70% of specimens in the final_dataset (70% completeness).
+
+We will open the file `samples_per_locus.txt` and extract those loci that have ≥ 151 taxa (70% of 217). This can be easily done in a spreadsheet such as `MS_Excel`.
+
