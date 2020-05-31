@@ -173,16 +173,23 @@ secapr add_missing_sequences --input final_dataset/ --output final_dataset/compl
 We can concatenate every fasta file into a single, Phylip format alignment. The Phylip format consists of single lines each with taxon name and sequence data. There are multiple chunks of sequences, each representing one locus. The taxon names are displayed in the first chunk of sequences, while the others have just sequence data in the same order as the first chunk of sequences:
 
 > 3 30
+>
 > Taxon_1   ATGTACTGTG
+>
 > Taxon_2   ATGTACTGTG
+>
 > Taxon_3   ATGTACTGTG
 >
 >ATGTACTGTG
->ATGTACTGTG
+>
 >ATGTACTGTG
 >
 >ATGTACTGTG
+>
 >ATGTACTGTG
+>
+>ATGTACTGTG
+>
 >ATGTACTGTG
 
 We will use the script `catfasta2phyml.pl` to concatenate all the fasta files (each representing one locus/exon) into a single Phylip format alignment.
