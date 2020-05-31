@@ -223,5 +223,27 @@ Go to [Table of Contents](#table-of-contents)
 ## 6. Subsetting datasets
 We will subset a different dataset. This time, we want to extract the loci that have at least 70% of specimens in the final_dataset (70% completeness).
 
-We will open the file `samples_per_locus.txt` and extract those loci that have ≥ 151 taxa (70% of 217). This can be easily done in a spreadsheet such as `MS_Excel`.
+We will open the file `samples_per_locus.txt` and extract those loci that have ≥ 151 sequences (70% of 217 taxa in final_dataset). This can be easily done in a spreadsheet such as `MS_Excel`. Save the subset of loci in a file `loci_atleast_151specimens.txt`
 
+```bash
+pavelmatos@nympha:~/eudaminae/processed/final_dataset/complete_alignments$
+mkdir ../151taxa_alignments
+cd ../151taxa_alignments #the combined version would be mkdir ../151taxa_alignments && cd "$_"
+
+cat ../../loci_atleast_151specimens.txt
+# P218
+# P373
+# P70
+
+# now a while loop to copy the files with the names in the loci_atleast_151specimens.txt
+while read -r line; do
+cp "../complete_alignments/""$line"".fasta" .
+done < ../../loci_atleast_150specimens.txt
+
+# concatenate and get partition file
+~/software/catfasta2phyml/catfasta2phyml.pl *.fasta > concatenated_340.phy 2> partitions_340.txt
+```
+
+Go to [Table of Contents](#table-of-contents)
+
+Now we are ready to search for the best-fit partitioning strategies for our 2 datasets. We will use PartitionFinder2.
