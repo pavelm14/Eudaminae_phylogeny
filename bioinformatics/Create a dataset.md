@@ -130,3 +130,16 @@ done
 
 In the code above, we indicate to go through every fasta file in the current directory `/cleaned_geneious` (renamed and single-line sequences). Then we read every line of the file `final_dataset.txt`, each line having a voucher code of interest for the final dataset. After that, we pick up every line containing the voucher code (i.e., the header in fasta files) and one line after it (the sequence). Finally, we save the taken headers with their respective sequences to files having the same name (e.g., `P1.fasta`) in the folder `/final_dataset`.
 
+### 3.1. Count the number of specimens per locus
+We counted above the number of loci per taxon. Now we will cound the number of sequences in the final dataset per locus.
+
+```bash pavelmatos@nympha:~/eudaminae/processed/cleaned_geneious$
+cd ../final_dataset
+
+for file in *.fasta; do
+c=`grep ">" "$file" | wc -l`
+echo -e "${file%%.*}\t$c"
+done > samples_per_locus.txt
+```
+
+In the code above, we go through every fasta file in the folder `/final_dataset` and count the number of sequences in every file (locus). Print the locus name (if the file is `P1.fasta` the locus name is P1) with the number of sequences, and save it in the file `samples_per_locus.txt`.
