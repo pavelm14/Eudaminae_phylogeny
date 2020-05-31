@@ -16,7 +16,7 @@ module add jdk-8 #I need to add java to my environment for running the .sh file 
 This is it! ASTRAL-III is installed at `/storage/plzen1/home/pavelmatos/software/ASTRAL/astral.5.7.3.jar`.
 
 ## ASTRAL in frontend brno2!!!
-ASTRAL 5.6.3 is also installed at `pavelmatos@skirit:~$`{.bash}. Unfortunately, on October 21, 2019, there was a shutdown on the server room `brno2` and by now everything in the path has changed. This has screwed all my installations, such as R packages, etc.
+ASTRAL 5.6.3 is also installed at `pavelmatos@skirit:~$`. Unfortunately, on October 21, 2019, there was a shutdown on the server room `brno2` and by now everything in the path has changed. This has screwed all my installations, such as R packages, etc.
 
 Fortunately, ASTRAL is still installed correctly and I can call the program using the old path `/storage/brno2/home/pavelmatos/software/ASTRAL/astral.5.6.3.jar`.
 
