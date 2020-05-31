@@ -133,7 +133,8 @@ In the code above, we indicate to go through every fasta file in the current dir
 ### 3.1. Count the number of specimens per locus
 We counted above the number of loci per taxon. Now we will cound the number of sequences in the final dataset per locus.
 
-```bash pavelmatos@nympha:~/eudaminae/processed/cleaned_geneious$
+```bash
+pavelmatos@nympha:~/eudaminae/processed/cleaned_geneious$
 cd ../final_dataset
 
 for file in *.fasta; do
