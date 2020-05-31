@@ -2,6 +2,16 @@
 
 Once we have our clean alignments, the next step is to create datasets for different type of analyses. The main goals here are: 1) to rename specimen names in every alignment file, 2) to subset the data, 3) to count the number of loci per specimen or the number of specimens per locus we have in our datasets, and 4) to concatenate and add missing sequences to specimens in every fasta file.
 
+##### Table of Contents  
+[Software](#software-that-we-need)  
+[1. Rename taxa](#1-rename-specimens-in-every-fasta-file)
+  [1.1. Reformat fasta sequences](11-multi--to-single-line-sequences-in-fasta-files)
+[2. Count loci per specimen](2-count-number-of-sequences-across-fasta-files)
+[3. Extract sequences](3-extract-sequences-of-interest-from-multiple-fasta-files)
+  [3.1. Count specimens per locus](31-count-the-number-of-specimens-per-locus)
+[4. Add missing sequences](4-add-missing-sequences-to-fasta-files)
+<a name="headers"/>
+
 ## Software that we need
 We will need to have three [pipelines already installed](https://github.com/pavelm14/Eudaminae_phylogeny/tree/master/bioinformatics/installations) for this part:
 - SeqKit: a cross-platform toolkit for phylogenomic fasta manipulation. This will allow us to batch rename taxa in every fasta file.
