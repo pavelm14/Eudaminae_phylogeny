@@ -5,11 +5,12 @@ Once we have our clean alignments, the next step is to create datasets for diffe
 ##### Table of Contents  
 - [Software](#software-that-we-need)  
 1. [Rename taxa](#1-rename-specimens-in-every-fasta-file)
-   - [Reformat fasta sequences](11-multi--to-single-line-sequences-in-fasta-files)
+   - [Reformat fasta sequences](#11-multi--to-single-line-sequences-in-fasta-files)
 2. [Count loci per specimen](2-count-number-of-sequences-across-fasta-files)
 3. [Extract sequences](3-extract-sequences-of-interest-from-multiple-fasta-files)
    - [Count specimens per locus](31-count-the-number-of-specimens-per-locus)
 4. [Add missing sequences](4-add-missing-sequences-to-fasta-files)
+5. [Concatenation and partition](#5-concatenation-and-partition-files)
 
 ## Software that we need
 We will need to have three [pipelines already installed](https://github.com/pavelm14/Eudaminae_phylogeny/tree/master/bioinformatics/installations) for this part:
@@ -180,17 +181,19 @@ We can concatenate every fasta file into a single, Phylip format alignment. The 
 >
 > Taxon_3   ATGTACTGTG
 >
->ATGTACTGTG
 >
->ATGTACTGTG
+>TGTGCACATG
 >
->ATGTACTGTG
+>TGTGCACATG
 >
->ATGTACTGTG
+>TGTGCACATG
 >
->ATGTACTGTG
 >
->ATGTACTGTG
+>CCACATGTGA
+>
+>CCACATGTGA
+>
+>CCACATGTGA
 
 We will use the script `catfasta2phyml.pl` to concatenate all the fasta files (each representing one locus/exon) into a single Phylip format alignment.
 
