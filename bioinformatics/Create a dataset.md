@@ -52,7 +52,7 @@ seqkit replace -p "(.+)" -r '{kv}' -k ../taxon_list.txt "$file" > "${file%%.*}""
 done
 ```
 
-Above, we ran the _replace_ option of SeqKit. This command uses regular expression to rename taxa in fasta files. In the `<-p>` and `-r` flags we tell the program to entirely replace string having a value by key-value file (taxon_list.txt). More info about the option and flags [here](https://bioinf.shenwei.me/seqkit/usage/#replace).
+Above, we ran the _replace_ option of SeqKit. This command uses regular expression to rename taxa in fasta files. In the `-p` and `-r` flags we tell the program to entirely replace string having a value by key-value file (taxon_list.txt). More info about the option and flags [here](https://bioinf.shenwei.me/seqkit/usage/#replace).
 
 The new fasta files will have the same name but a different extension. For example, we had the original file `P1.fasta` so we will have the file `P1.fas` with the renamed taxa.
 
@@ -180,6 +180,7 @@ We can concatenate every fasta file into a single, Phylip format alignment. The 
 > Taxon_2   ATGTACTGTG
 >
 > Taxon_3   ATGTACTGTG
+>
 >
 >
 >TGTGCACATG
