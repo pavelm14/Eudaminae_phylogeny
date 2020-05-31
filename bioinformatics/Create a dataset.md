@@ -33,7 +33,7 @@ We will use a for loop to go through every fasta file in the folder `/cleaned_ge
 ```bash
 pavelmatos@nympha:~/eudaminae/processed/cleaned_geneious$
 #activate and use SeqKit from the PATH environment
-source ~/.bashrc
+source ~/.bashrc #source /storage/plzen1/home/pavelmatos/.bashrc
 
 # note that the file taxon_list.txt is in one directory above, in ~/eudaminae/processed
 
@@ -144,3 +144,18 @@ done > samples_per_locus.txt
 ```
 
 In the code above, we go through every fasta file in the folder `/final_dataset` and count the number of sequences in every file (locus). Print the locus name (if the file is `P1.fasta` the locus name is P1) with the number of sequences, and save it in the file `samples_per_locus.txt`.
+
+## 4. Add missing sequences to fasta files
+When using programs such as BEAST we need to have the same number of taxa in every locus file. We also need to have missing sequences filled with "?" or "N" when using the concatenation method in, for example, IQTREE.
+
+We will use the `add_missing_sequences` function from the SECAPR pipeline to add missing sequences to every fasta alignment.
+
+```bash
+pavelmatos@nympha:~/eudaminae/processed/final_dataset$
+#activate SECAPR from the PATH environment and conda
+source ~/.bashrc #source /storage/plzen1/home/pavelmatos/.bashrc
+source activate secapr_env
+
+cd ..
+secapr add_missing_sequences --input final_dataset/ --output final_dataset/complete_alignments
+```
