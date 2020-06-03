@@ -13,6 +13,8 @@ You will find the steps to follow all the pipelines, packages, and software need
 
 - [SeqKit](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/SeqKit.md) to edit fasta files in batch (e.g., renaming taxa in every file).
 
+- [catfasta2phyml](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/catfasta2phyml.md) to concatenate and get partition files from multiple fasta files.
+
 ### Phylogeny inference
 
 - [ASTRAL](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/ASTRAL.md) to infer species trees from gene trees using a summary approach of the multispecies coalescent.
