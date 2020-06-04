@@ -13,16 +13,26 @@ cd mp-est/src
 
 ## You need to specify the OS in the makefile
 nano makefile
->>>ARCHITECTURE ?= unix 
+>>> ARCHITECTURE ?= unix 
 ## Ctrl+x -> Save Y
+
+## Install MP-EST2.0
+make
 ```
 
-This is it! ASTRAL-III is installed at `/storage/plzen1/home/pavelmatos/software/ASTRAL/astral.5.7.3.jar`.
+To add MP-EST 2.0 to the $PATH environment
 
-## ASTRAL in frontend brno2!!!
-ASTRAL 5.6.3 is also installed at `pavelmatos@skirit:~$`. Unfortunately, on October 21, 2019, there was a shutdown on the server room `brno2` and by now everything in the path has changed. This has screwed all my installations, such as R packages, etc.
+```bash
+pavelmatos@nympha:~/software/mp-est/src$
 
-Fortunately, ASTRAL is still installed correctly and I can call the program using the old path `/storage/brno2/home/pavelmatos/software/ASTRAL/astral.5.6.3.jar`.
+nano ~/.bashrc # nano /storage/plzen1/home/pavelmatos/.bashrc
+>>> export PATH="/storage/plzen1/home/pavelmatos/software/mp-est/src:$PATH"
+## Ctrl+x -> Save Y
+
+## Run MP-EST 2.0
+source ~/.bashrc
+mpest
+```
 
 ### References
-- Zhang et al. (2018) ASTRAL-III: Polynomial Time Species Tree Reconstruction from Partially Resolved Gene Trees. BMC Bioinformatics 19(S6): 153. DOI: [10.1186/s12859-018-2129-y](https://doi.org/10.1186/s12859-018-2129-y)
+- Liu et al. (2010) A maximum pseudo-likelihood approach for estimating species trees under the coalescent model. BMC Evolutionary Biology 10: 302. DOI: [10.1186/1471-2148-10-302](https://doi.org/10.1186/1471-2148-10-302)
