@@ -19,6 +19,8 @@ You will find the steps to follow all the pipelines, packages, and software need
 
 - [PartitionFinder2](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/PartitionFinder.md) to obtain the best-fit partitioning strategy for concatenation phylogenetic inference.
 
-- [ASTRAL](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/ASTRAL.md) to infer species trees from gene trees using a summary approach of the multispecies coalescent.
-
 - [IQTREE 2](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/IQTREE.md) to infer phylogenies using the concatenation method.
+
+- [ASTRAL](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/ASTRAL.md) to infer species trees from unrooted gene trees using a summary approach of the multispecies coalescent.
+
+- [MP-EST](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/MP-EST.md) to infer species trees from rooted, binary gene trees using a summary approach of the multispecies coalescent.
