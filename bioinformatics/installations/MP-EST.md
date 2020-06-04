@@ -11,10 +11,10 @@ cd software/
 git clone git clone https://github.com/lliu1871/mp-est.git
 cd mp-est/src
 
-# You need to specify the OS in the makefile
+## You need to specify the OS in the makefile
 nano makefile
->>> ARCHITECTURE ?= unix 
-Ctrl+x -> y -> Enter
+>>>ARCHITECTURE ?= unix 
+## Ctrl+x -> Save Y
 ```
 
 This is it! ASTRAL-III is installed at `/storage/plzen1/home/pavelmatos/software/ASTRAL/astral.5.7.3.jar`.
