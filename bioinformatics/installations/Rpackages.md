@@ -58,4 +58,15 @@ q()
 ```
 
 ### References
-- Zhang et al. (2018) ASTRAL-III: Polynomial Time Species Tree Reconstruction from Partially Resolved Gene Trees. BMC Bioinformatics 19(S6): 153. DOI: [10.1186/s12859-018-2129-y](https://doi.org/10.1186/s12859-018-2129-y)
+
+#### Ancient gene flow detection
+- Cai et al. (2020) The perfect storm: Gene tree estimation error, incomplete lineage sorting, and ancient gene flow explain the most recalcitrant ancient Angiosperm clade, Malpighiales. bioRxiv 2020.05.26.112318. DOI: [10.1101/2020.05.26.112318](https://doi.org/10.1101/2020.05.26.112318)
+
+#### R package `phybase`
+- http://faculty.franklin.uga.edu/lliu/phybase
+
+#### R package `phytools`
+- Revell (2012) phytools: an R package for phylogenetic comparative biology (and other things). Methods in Ecology and Evolution 3(2): 217-223. DOI: [10.1111/j.2041-210X.2011.00169.x](https://doi.org/10.1111/j.2041-210X.2011.00169.x)
+
+#### R package `ape`
+- Paradis et al. (2004) APE: Analyses of Phylogenetics and Evolution in R language. Bioinformatics 20(2): 289-290. DOI: [10.1093/bioinformatics/btg412](https://doi.org/10.1093/bioinformatics/btg412)
