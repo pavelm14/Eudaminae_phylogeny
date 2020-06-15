@@ -24,3 +24,7 @@ You will find the steps to follow all the pipelines, packages, and software need
 - [ASTRAL](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/ASTRAL.md) to infer species trees from unrooted gene trees using a summary approach of the multispecies coalescent.
 
 - [MP-EST](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/MP-EST.md) to infer species trees from rooted, binary gene trees using a summary approach of the multispecies coalescent.
+
+### Evolutionary analyses in R
+
+- [Installing R packages](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/Rpackages.md) to get packages that are not available in MetaCentrum.
