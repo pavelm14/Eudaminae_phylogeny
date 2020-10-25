@@ -16,25 +16,19 @@ I use the home portable version of [MobaXterm](https://mobaxterm.mobatek.net/dow
 
 ```bash
 [pavel local computer]$
+
 ssh -x pavelmatos@nympha.metacentrum.cz ##To run NGS data analyses
 ssh -x pavelmatos@zuphux.cerit-sc.cz ##To run high-memory demanding jobs
 ssh -x pavelmatos@skirit.metacentrum.cz ##To run diversification and biogeography analyses
 ssh -x pavelmatos@storage-brno3-cerit.metacentrum.cz ##To back up data. This is the same as @zuphux.cerit-sc.cz but can't run any job here
 ```
-## Software installation in MetaCentrum
-MetaCentrum has a [page](https://wiki.metacentrum.cz/wiki/How_to_install_an_application) detailing how to install software, packages written in several programming languages, or using GUI to install some applications.
-
-I also describe in separate entries how to install the following relevant software in MetaCentrum:
-
-- **[SECAPR](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/SECAPR.md), SEquence CApture PRocessor** ([Andermann et al. 2018](https://doi.org/10.7717/peerj.5175)): This is a pipeline for processing targeted enriched Illumina sequences, from raw data to alignments. However, I also use this pipeline to process whole-genome resequencing data.
-
-- **SRA toolkit** ([NCBI 2011&ndash;](https://www.ncbi.nlm.nih.gov/books/NBK158900/)): This is a collection of packages for downloading and managing SRA data from GenBank. I use this for getting the whole-genome resequencing data from [Li et al. (2019)](https://www.pnas.org/content/116/13/6232).
 
 ## Retrieve data from local disk to cluster (and vice versa)
 I use MobaXterm to transfer data between my local computer and the MetaCentrum. For example, I want to back up a copy of the raw target capture sequencing data that is in my disk D:
 
 ```bash
 [pavel local computer]$
+
 cd /drives/d/PAVEL/Lepidoptera\ projects/Hesperiidae/Laboratory/RapidGenomics/data/raw/
 ```
 
@@ -44,6 +38,7 @@ To copy these recursiverly to my back up folder in `storage-brno3-cerit.metacent
 
 ```bash
 [pavel local computer]$
+
 scp -r ./*.fastq.gz pavelmatos@zuphux.cerit-sc.cz:/home/pavelmatos/eudaminae/raw
 ```
 
@@ -51,6 +46,7 @@ If many large directories are needed, a batch download of part of them might be 
 
 ```bash
 [pavel local computer]$
+
 for i in {001..030}; 
 do scp -r ../../../NGS\ bioinformatics/processed/2_cleaned_trimmed_reads/"$i"_clean/ pavelmatos@nympha.metacentrum.cz:/home/pavelmatos/eudaminae/processed/2_cleaned_trimmed_reads;
 done
@@ -63,6 +59,7 @@ To change modes to `user`, `group`, `others` to `write`, `read`, `execute` on a 
 
 ```bash
 pavelmatos@nympha:~$
+
 find ./any_folder/ -type d -exec chmod 755 {} \;
 ```
 
@@ -70,6 +67,7 @@ And this is for files within a folder:
 
 ```bash
 pavelmatos@nympha:~$
+
 find ./any_folder/ -type f -exec chmod 755 {} \;
 ```
 
@@ -105,3 +103,13 @@ Some files that were created in Windows can be screwed or not in the correct for
 pavelmatos@nympha:~$
 dos2unix file_rename.sh
 ```
+
+## Software installation in MetaCentrum
+MetaCentrum has a [page](https://wiki.metacentrum.cz/wiki/How_to_install_an_application) detailing how to install software, packages written in several programming languages, or using GUI to install some applications.
+
+I also describe in separate entries how to install the following relevant software in MetaCentrum:
+
+- **[SECAPR](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/SECAPR.md), SEquence CApture PRocessor** ([Andermann et al. 2018](https://doi.org/10.7717/peerj.5175)): This is a pipeline for processing targeted enriched Illumina sequences, from raw data to alignments. However, I also use this pipeline to process whole-genome resequencing data.
+
+- **SRA toolkit** ([NCBI 2011&ndash;](https://www.ncbi.nlm.nih.gov/books/NBK158900/)): This is a collection of packages for downloading and managing SRA data from GenBank. I use this for getting the whole-genome resequencing data from [Li et al. (2019)](https://www.pnas.org/content/116/13/6232).
+
