@@ -8,7 +8,7 @@ We focus on the skipper butterfly subfamily Eudaminae (Lepidoptera: Hesperiidae)
 You can have a look at some nice pictures of mounted and alive butterflies, and caterpilars, at [Butterflies of America](https://www.butterfliesofamerica.com/L/Hesperiidae.htm).
 
 ## The data
-The primary dataset comes from our sampling and target capture approach. The baits to capture come from Espeland et al. (2018), the so-called Anchored Hybrid Enrichment (AHE) BUTTERFLY 1.0 kit., which targeted 425 loci.
+The primary dataset comes from our sampling and target capture approach. The baits to capture come from Espeland et al. (2018), the so-called Anchored Hybrid Enrichment (AHE) BUTTERFLY 1.0 kit., which targeted 425 loci. For wet-lab protocols, visit this repository's [page](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/laboratory/pre-sequencing%20protocol.md)
 
 As a complementary dataset, Emmanuel Toussaint shared their sequences of several Eudaminae taxa. Their data come from a target capture approach using the BUTTERFLY 1.0 kit, and another kit targeting a subset of the 425 loci, the so-called legacy butterfly gene markers.
 
