@@ -6,6 +6,7 @@ I use MobaXterm to transfer data between my local computer and the MetaCentrum. 
 1. [Copy data from local to cluster](#1-copy-raw-data-from-local-computer)
 2. [Change rights to documents](#2-changing-the-rights-of-documents)
 3. [Transfer sanitation](#3-transfer-sanitation)
+[NEXT STEP](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/worfklow/2_Retrieve_SRA.md) (download SRA to cluster)
 
 ## Software that we need
 - [MobaXterm](https://mobaxterm.mobatek.net/download.html): is a very convenient interface for Windows OS. The syntax it uses is bash. Download it from [here](https://mobaxterm.mobatek.net/download.html) (the Home free edition is enough for our purposes).
@@ -106,4 +107,4 @@ pavelmatos@nympha:~$
 dos2unix file_rename.sh
 ```
 
-
+[NEXT STEP](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/worfklow/2_Retrieve_SRA.md) (download SRA to cluster)
