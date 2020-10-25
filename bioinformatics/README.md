@@ -104,7 +104,7 @@ pavelmatos@nympha:~$
 dos2unix file_rename.sh
 ```
 
-## 3. Software installation in MetaCentrum
+## 2. Software installation in MetaCentrum, from raw reads to alignments
 MetaCentrum has a [page](https://wiki.metacentrum.cz/wiki/How_to_install_an_application) detailing how to install software, packages written in several programming languages, or using GUI to install some applications.
 
 I also describe in separate entries how to install the following relevant software in MetaCentrum:
@@ -112,4 +112,13 @@ I also describe in separate entries how to install the following relevant softwa
 - **[SECAPR](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/installations/SECAPR.md), SEquence CApture PRocessor** ([Andermann et al. 2018](https://doi.org/10.7717/peerj.5175)): This is a pipeline for processing targeted enriched Illumina sequences, from raw data to alignments. However, I also use this pipeline to process whole-genome resequencing data.
 
 - **SRA toolkit** ([NCBI 2011&ndash;](https://www.ncbi.nlm.nih.gov/books/NBK158900/)): This is a collection of packages for downloading and managing SRA data from GenBank. I use this for getting the whole-genome resequencing data from [Li et al. (2019)](https://www.pnas.org/content/116/13/6232).
+
+- For more software, have a look at the ["Installations" page](https://github.com/pavelm14/Eudaminae_phylogeny/tree/master/bioinformatics/installations).
+
+## 3. Pipeline, from raw reads to alignments
+This workflow contains:
+
+- Retrieve data: The target-capture data are stored in my local computer while the WGS data are stored in GenBank. In this step, we retrieve all data to the cluster frontend.
+
+
 
