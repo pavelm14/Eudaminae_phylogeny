@@ -37,7 +37,9 @@ I also describe in separate entries how to install the following relevant softwa
 ## 3. Pipeline, from raw reads to alignments
 This workflow contains:
 
-- Retrieve data: The target-capture data are stored in my local computer while the WGS data are stored in GenBank. In this step, we retrieve all data to the cluster frontend.
+1. [Retrieve data](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/worfklow/1_Retrieve_local.md): The target-capture data are stored in my local computer while the WGS data are stored in GenBank. In this step, we retrieve all data to the cluster frontend.
 
+2. Quality control
 
+[BEGIN WORKFLOW](https://github.com/pavelm14/Eudaminae_phylogeny/blob/master/bioinformatics/worfklow/1_Retrieve_local.md) by retrieving target-capture data stored at local computer.
 
