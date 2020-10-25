@@ -2,7 +2,7 @@
 
 The target capture sequence raw data as it was sent by RapidGenomics are stored in: 1) **My laptop**, 2) **External HD**, 3) **Albiorix Gothenburg cluster (~/proj/data25)**, and 4) **MetaCentrum Czech national cluster (/storage/brno3-cerit/home/pavelmatos/eudaminae/raw)**.
 
-## The MetaCentrum infrastructure
+## 1. The MetaCentrum infrastructure
 There are several frontends, or machines, that can be used directly via log in without reservation. I've been regularly using 4 frontends:
 - `skirit.ics.muni.cz` (home directory in **_brno2_**) for small analyses such as diversification and biogeography,
 - `zuphux.cerit-sc.cz` (home directory in **_brno3-cerit_**) for high memory jobs, up to a few TB of memory,
@@ -23,7 +23,7 @@ ssh -x pavelmatos@skirit.metacentrum.cz ##To run diversification and biogeograph
 ssh -x pavelmatos@storage-brno3-cerit.metacentrum.cz ##To back up data. This is the same as @zuphux.cerit-sc.cz but can't run any job here
 ```
 
-## Retrieve data from local disk to cluster (and vice versa)
+## 2. Retrieve data from local disk to cluster (and vice versa)
 I use MobaXterm to transfer data between my local computer and the MetaCentrum. For example, I want to back up a copy of the raw target capture sequencing data that is in my disk D:
 
 ```bash
@@ -104,7 +104,7 @@ pavelmatos@nympha:~$
 dos2unix file_rename.sh
 ```
 
-## Software installation in MetaCentrum
+## 3. Software installation in MetaCentrum
 MetaCentrum has a [page](https://wiki.metacentrum.cz/wiki/How_to_install_an_application) detailing how to install software, packages written in several programming languages, or using GUI to install some applications.
 
 I also describe in separate entries how to install the following relevant software in MetaCentrum:
