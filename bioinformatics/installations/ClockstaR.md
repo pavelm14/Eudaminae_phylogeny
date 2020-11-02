@@ -159,14 +159,11 @@ For more details on the interpretation of the graphs, visit the [program's Githu
 
 ### References
 
-#### Ancient gene flow detection
-- Cai et al. (2020) The perfect storm: Gene tree estimation error, incomplete lineage sorting, and ancient gene flow explain the most recalcitrant ancient Angiosperm clade, Malpighiales. bioRxiv 2020.05.26.112318. DOI: [10.1101/2020.05.26.112318](https://doi.org/10.1101/2020.05.26.112318)
+#### R package `ClockstaR`
+- Duchene et al. (2014a) ClockstaR: choosing the number of relaxed-clock models in molecular phylogenetic analysis. Bioinformatics 30 (7): 1017-1019. DOI: [10.1093/bioinformatics/btt665](https://doi.org/10.1093/bioinformatics/btt665)
 
-#### R package `phybase`
-- http://faculty.franklin.uga.edu/lliu/phybase
+#### Clock partitioning improves estimates of divergence times
+- Duchene & Ho (2014b) Using multiple relaxed-clock models to estimate evolutionary timescales from DNA sequence data. Molecular Phylogenetics and Evolution (77): 65-70. DOI: [10.1016/j.ympev.2014.04.010](https://doi.org/10.1016/j.ympev.2014.04.010)
 
-#### R package `phytools`
-- Revell (2012) phytools: an R package for phylogenetic comparative biology (and other things). Methods in Ecology and Evolution 3(2): 217-223. DOI: [10.1111/j.2041-210X.2011.00169.x](https://doi.org/10.1111/j.2041-210X.2011.00169.x)
-
-#### R package `ape`
-- Paradis et al. (2004) APE: Analyses of Phylogenetics and Evolution in R language. Bioinformatics 20(2): 289-290. DOI: [10.1093/bioinformatics/btg412](https://doi.org/10.1093/bioinformatics/btg412)
+#### Clustering algorithm
+- Kaufman & Rousseeuw (2009) Finding groups in data: an introduction to cluster analysis (Vol. 344). [John Wiley & Sons](https://www.wiley.com/en-us/Finding+Groups+in+Data%3A+An+Introduction+to+Cluster+Analysis-p-9780470317488).
